@@ -15,10 +15,9 @@ jobs:
           npm install
           npm run build
   test:
-     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
      
-     
-     strategy:
+    strategy:
       matrix:
         os: [windows-latest, ubuntu-latest]
         node-version: [12.x, 14.x]
@@ -30,9 +29,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      -name: NPM install and test
+      - name: NPM install and test
       - run: 
-        npm run install
-        npm test
-      env:
-        CI: true
+          npm run install
+          npm test
+        env:
+          CI: true
