@@ -14,12 +14,12 @@ jobs:
         run:
           npm install
           npm run build
-  #test:
-   ######## runs-on: ubuntu-latest
-   ####### strategy:
-    ######  matrix:
-   #####     os: [windows-latest, ubuntu-latest]
-    ####    node-version: [12.x, 14.x]
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        node-version: [12.x, 14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases !
   ###  steps:
   ##    - uses: actions/checkout@v2
