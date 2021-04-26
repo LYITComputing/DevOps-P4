@@ -7,9 +7,9 @@ This is the starter repository for practical four of the module **DevOps Pipelin
 ### Learning outcomes
 In this practical exercise you will learn how to:
 
-- Add a GitHub workflow to your repository
-- Define build and test jobs
-- Read GitHub Action logs
-- Target different build targets using a build matrix
-- Create build artefacts and share them between jobs
-- Automate pull request reviews using GitHub actions  
+1 - Add a GitHub workflow to your repository
+2 - Define build and test jobs
+3 - Read GitHub Action logs
+4 - Target different build targets using a build matrix
+5 - Create build artefacts and share them between jobs
+6 - Automate pull request reviews using GitHub actions  
