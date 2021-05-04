@@ -17,7 +17,7 @@ jobs:
       - name: Build project assets
         run: npm run build
       - name: Upload Static
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@main
         with:
-          name: static-build
-          path: .next/
+          name: webpack artifacts
+          path: public/
