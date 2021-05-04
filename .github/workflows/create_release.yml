@@ -17,6 +17,7 @@ jobs:
       - name: Zip Project
         uses: thedoctor0/zip-release@master
         with:
+          path: public/
           filename: 'release.zip'
       - name: Release
         id: create_release
