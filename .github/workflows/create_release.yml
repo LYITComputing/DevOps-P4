@@ -13,11 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install dependencies
-	    uses: npm install
+	      uses: npm install
       - name: Build source code
-	    uses: npm run build
+	      uses: npm run build
       - name: Upload Artefact
-	    uses: actions/upload-artifact@v2
+	      uses: actions/upload-artifact@v2
 	      with:
 	        name: X's&O's
 	        path: out\      
