@@ -1,23 +1,23 @@
-name: Upload Release Asset
 on:
   push:
     # Sequence of patterns matched against refs/tags - this will be handy in an acy=tual working enviroment, where we can specify what needs a release and what does not
     tags:
       - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
+name: Upload Release Asset
 jobs:
-  build:
-    name: Build & Upload Project
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Install dependencies
-	      run: npm install
-      - name: Build source code
-	      run: npm run build
-      - name: Upload Artefact
-	      uses: actions/upload-artifact@v2
-	      with:
-	        name: X's&O's
-	        path: out\      
+build-project:
+  name: Build Project
+  runs-on: ubuntu-latest
+  steps:
+  - name: Checkout code
+    uses: actions/checkout@v2
+  - name: Install NPM dependencies
+    run: npm install
+  - name: Build project assets
+    run: npm run build
+  - name: Upload Static
+  uses: actions/upload-artifact@v2
+  with:
+    name: static-build
+    path: .next/
