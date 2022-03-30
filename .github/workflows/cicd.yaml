@@ -1,0 +1,21 @@
+name: ci + cd demo workflow
+
+# define when the workflow should run/ On a push to main, a PR to main or manually with workflow
+
+on:
+  push:
+    branches: [ march30 ]
+  pull_request:
+    branches: [ march30 ]
+  workflow_dispatch: 
+  
+jobs:
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - run: npm install
+    - run: npm test
