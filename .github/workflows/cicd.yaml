@@ -19,7 +19,7 @@ jobs:
         node-version: '12'
     - run: |
         npm install
-        npm run build
+        npm build
     - run: npm test
     - uses: actions/upload-artifact@master
       with:
