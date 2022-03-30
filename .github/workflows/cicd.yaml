@@ -12,18 +12,16 @@ on:
 jobs:
   Install-linux:
     runs-on: ubuntu-latest
-    env:
-      cache-name: cache-node-modules
-    with:
-      # npm cache files are stored in `~/.npm` on Linux/macOS
-      path: /home/runner/work/DevOps-P4/DevOps-P4/
-      key: brian
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
     - run: npm install
+    - uses: actions/upload-artifact@master
+    with:
+      name: my-artifact
+      path: /home/runner/work/DevOps-P4/DevOps-P4/
     
 
   Install-windows:
@@ -39,6 +37,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ Install-linux ]
     steps:
+    - uses: actions/checkout@master
+    - uses: actions/download-artifact@master
+    with:
+      name: my-artifact
+      path: /home/runner/work/DevOps-P4/DevOps-P4/
     - run: npm test
 
 
