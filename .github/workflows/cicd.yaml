@@ -17,9 +17,10 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '12'
-    - run: npm install
-    - run: npm run-script build
-    - run: npm test
+    - run: | 
+        npm install
+        npm run-script build
+        npm test
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
