@@ -21,7 +21,7 @@ jobs:
         npm install
         npm run-script build
         ls -al /home/runner/work/DevOps-P4/DevOps-P4/public
-        npm test
+        npm test -- -u
     - uses: actions/upload-artifact@master
       with:
         name: my-artifact
