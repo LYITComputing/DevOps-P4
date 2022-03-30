@@ -1,3 +1,5 @@
+[![Node.js CI](https://github.com/David-Curtin/DevOps-P4/actions/workflows/node.js.yml/badge.svg)](https://github.com/David-Curtin/DevOps-P4/actions/workflows/node.js.yml)
+
 # DevOp Pipelines - Practical four
 
 ## Introduction to Continuous Integration (CI) with GitHub Actions
