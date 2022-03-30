@@ -20,7 +20,7 @@ jobs:
     - run: | 
         npm install
         npm run-script build
-        ls -al ~/public
+        ls -al /home/runner/work/DevOps-P4/DevOps-P4/public
         npm test
     - uses: actions/upload-artifact@master
       with:
