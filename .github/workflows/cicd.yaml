@@ -45,6 +45,7 @@ jobs:
       with:
         name: my-artifact
         path: /home/runner/work/DevOps-P4/DevOps-P4/
+    - run: chmod 777 -R /home/runner/work/DevOps-P4/DevOps-P4/
     - run: npm test
 
 
