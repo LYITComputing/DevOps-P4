@@ -24,6 +24,7 @@ jobs:
         path: |
             /home/runner/work/DevOps-P4/DevOps-P4/
             !/home/runner/work/DevOps-P4/DevOps-P4/node_modules
+            !/home/runner/work/DevOps-P4/DevOps-P4/.git
     
 
   Install-windows:
