@@ -29,7 +29,7 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
+        SONAR_TOKEN: L00170155_DevOps-P4-Brian  
 
   Sonarcloud:
     runs-on: ubuntu-latest
