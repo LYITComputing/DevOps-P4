@@ -14,8 +14,6 @@ on:
 jobs:
   Install-linux:
     runs-on: ubuntu-latest
-    environment:
-      name: dev 
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -29,7 +27,7 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
-        SONAR_TOKEN: 'L00170155_DevOps-P4-Brian'  
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  
 
   Sonarcloud:
     runs-on: ubuntu-latest
