@@ -24,6 +24,9 @@ jobs:
 
   sonarcloud:
     runs-on: ubuntu-latest
+    needs: [Install-linux]
+    environment:
+      name: dev 
     steps:
     - uses: actions/checkout@v2
       with:
