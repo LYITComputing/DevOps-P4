@@ -19,14 +19,13 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '12'
-      run: | 
-        npm install
+    - name: install mpm
+      run: npm install
     - name: Checkout code
       uses: actions/checkout@v3
       with:
         # Full git history is needed to get a proper list of changed files within `super-linter`
         fetch-depth: 0
-
     - name: Lint Code Base
       uses: github/super-linter@v4
       env:
