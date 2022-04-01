@@ -1,6 +1,6 @@
 name: ci + cd demo workflow
 
-# define when the workflow should run/ On a push to main, a PR to main or manually with workflow
+# define when the workflow should run/ On ca push to main, a PR to main or manually with workflow
 
 on:
   push:
