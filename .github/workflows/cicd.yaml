@@ -30,7 +30,7 @@ jobs:
       uses: github/super-linter@v4
       env:
         VALIDATE_ALL_CODEBASE: false
-        DEFAULT_BRANCH: $default-branch
+        DEFAULT_BRANCH: march30
         GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
     #   uses: actions/checkout@v3
     #   with:
@@ -48,7 +48,7 @@ jobs:
     #   uses: github/super-linter@v4
     #   env:
     #     VALIDATE_ALL_CODEBASE: false
-    #     DEFAULT_BRANCH: $default-branch
+    #     DEFAULT_BRANCH: 'march30'
     #     GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
 
   # Sonarcloud:
