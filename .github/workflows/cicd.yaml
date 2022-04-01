@@ -22,25 +22,25 @@ jobs:
       run: | 
         npm install
     
-    - name: Checkout code
-      uses: actions/checkout@v3
-      with:
-        # Full git history is needed to get a proper list of changed files within `super-linter`
-        fetch-depth: 0
+    # - name: Checkout code
+    #   uses: actions/checkout@v3
+    #   with:
+    #     # Full git history is needed to get a proper list of changed files within `super-linter`
+    #     fetch-depth: 0
 
-    - name: test
-      uses: actions/checkout@v3
-      run: | 
-        npm install
-        npm run-script build
-        npm test -- -u
+    # - name: test
+    #   uses: actions/checkout@v3
+    #   run: | 
+    #     npm install
+    #     npm run-script build
+    #     npm test -- -u
 
-    - name: Lint Code Base
-      uses: github/super-linter@v4
-      env:
-        VALIDATE_ALL_CODEBASE: false
-        DEFAULT_BRANCH: $default-branch
-        GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
+    # - name: Lint Code Base
+    #   uses: github/super-linter@v4
+    #   env:
+    #     VALIDATE_ALL_CODEBASE: false
+    #     DEFAULT_BRANCH: $default-branch
+    #     GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
 
   # Sonarcloud:
   #   runs-on: ubuntu-latest
