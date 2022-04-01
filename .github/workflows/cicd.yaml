@@ -16,21 +16,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: install
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
       uses: actions/setup-node@v2
       with:
         node-version: '12'
       run: | 
         npm install
+    
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        # Full git history is needed to get a proper list of changed files within `super-linter`
+        fetch-depth: 0
+
+    - name: test
+      uses: actions/checkout@v3
+      run: | 
+        npm install
         npm run-script build
         npm test -- -u
-    # - name: Checkout code
-    #     uses: actions/checkout@v3
-    #     with:
-    #       # Full git history is needed to get a proper list of changed files within `super-linter`
-    #       fetch-depth: 0
 
     - name: Lint Code Base
       uses: github/super-linter@v4
