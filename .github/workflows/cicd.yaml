@@ -22,7 +22,7 @@ jobs:
     - uses: toko-bifrost/ms-teams-deploy-card@master #  or "./" if in a local set-up
       if: always()
       with:
-        github-token: ${{ TOKEN_FOR_GITHUB }}
+        github-token: ${{ secrets.TOKEN_FOR_GITHUB }}
         webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
     - name: install mpm
       run: npm install
