@@ -25,7 +25,10 @@ jobs:
         github-token: ${{ secrets.TOKEN_FOR_GITHUB }}
         webhook-uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
     - name: install mpm
-      run: npm install
+      run: |
+        npm install
+        npm run-script build
+        npm test -- -u
     - name: Checkout code
       uses: actions/checkout@v3
       with:
@@ -39,7 +42,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN_FOR_GITHUB }}
     - name: Perform Scan
       uses: ShiftLeftSecurity/scan-action@master
-    - name: test
-      run: | 
-        npm run-script build
-        npm test -- -u
+    
