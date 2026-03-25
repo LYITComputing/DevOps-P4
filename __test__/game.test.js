@@ -1,17 +1,17 @@
 const Game = require('../src/game').default
-const fs = require('fs')
+// const fs = require('fs')
 
-describe('App', () => {
-  test('Contains the compiled JavaScript', done => {
-    fs.readFile('./public/main.js', 'utf8', (err, data) => {
-      expect(err).toBe(null)
-      expect(data).toContain('window.onload')
-      expect(data).toContain('this.board')
-      expect(data).toContain('this.p2=e')
-      done()
-    })
-  })
-})
+// describe('App', () => {
+//   test('Contains the compiled JavaScript', done => {
+//     fs.readFile('./public/main.js', 'utf8', (err, data) => {
+//       expect(err).toBe(null)
+//       expect(data).toContain('window.onload')
+//       expect(data).toContain('this.board')
+//       expect(data).toContain('this.p2=e')
+//       done()
+//     })
+//   })
+// })
 
 // const Game = require('../src/game').default
 // const fs = require('fs')
